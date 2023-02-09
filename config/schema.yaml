@@ -1,0 +1,39 @@
+#@data/values-schema
+---
+registry:
+  server: ""
+  repository: ""
+
+maven:
+  repository:
+    url: https://repo1.maven.org
+    secret_name: ""
+
+gitops:
+  branch: main
+  username: ""
+  email: author@git.com
+  commit_message: "chore: updating application"
+  ssh_secret: ""
+  server_address: https://github.com
+  repository_prefix: ""
+  repository_owner: ""
+  repository_name: ""
+  pull_request:
+    server_kind: "github"
+    pull_request_title: "Bumping application version"
+    pull_request_body: ""
+
+service_account: default
+
+git_implementation: git
+
+scanning:
+  source:
+    policy: scan-policy
+    template: scan-template
+  image:
+    policy: scan-policy
+    template: scan-template
+
+cluster_builder: default
