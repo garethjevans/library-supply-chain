@@ -71,3 +71,21 @@ spec:
           wget -qO- $(params.source-url) | tar xvz -m
           go test ./...
 ```
+
+## Test the supply chain
+
+```
+tanzu apps workload create library-supply-chain \
+  --git-branch main \
+  --git-repo https://github.com/garethjevans/library-supply-chain \
+  --namespace dev \
+  --label app.kubernetes.io/part-of=library-supply-chain \
+  --param-yaml testing_pipeline_matching_labels='{"apps.tanzu.vmware.com/pipeline":"supply-chain-pipeline"}' \
+  --param-yaml testing_pipeline_params='{}' \
+  --type supply-chain \
+  --yes
+```
+
+
+
+
