@@ -7,6 +7,6 @@ git_implementation: go-git
 scanning:
   source:
     policy: scan-policy
-    template: scan-template
+    template: blob-source-scan-template
 
 cluster_builder: default
