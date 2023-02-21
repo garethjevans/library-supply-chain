@@ -8,5 +8,3 @@ scanning:
   source:
     policy: scan-policy
     template: blob-source-scan-template
-
-cluster_builder: default
