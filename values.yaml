@@ -1,8 +1,4 @@
 ---
-registry:
-  server: "gcr.io"
-  repository: "ship-interfaces-dev/supply-chain"
-
 service_account: default
 
 git_implementation: go-git
